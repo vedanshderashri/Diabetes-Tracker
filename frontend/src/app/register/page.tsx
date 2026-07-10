@@ -17,7 +17,7 @@ export default function RegisterPage() {
 
     try {
       await api.register(form);
-      router.push("/dashboard");
+      router.push("/chat");
     } catch (err) {
       if (err instanceof ApiError) setError(err.message);
       else setError("An unexpected error occurred");

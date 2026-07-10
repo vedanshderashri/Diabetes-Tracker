@@ -18,7 +18,7 @@ export default function LoginPage() {
 
     try {
       await api.login(email, password);
-      router.push("/dashboard");
+      router.push("/chat");
     } catch (err) {
       if (err instanceof ApiError) {
         setError(err.message);
