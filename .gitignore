@@ -1,0 +1,58 @@
+# Environments
+venv/
+.venv/
+backend/venv/
+backend/.venv/
+
+# Environment files / Secrets
+.env
+.env.local
+backend/.env
+frontend/.env.local
+
+# Databases
+*.db
+*.sqlite
+backend/medai.db
+backend/chroma_data/
+chroma_data/
+
+# Uploads
+uploads/
+backend/uploads/
+
+# Large Datasets
+*.csv
+Testing.csv
+Training.csv
+dataset.csv
+diabetes_prediction_dataset.csv
+
+# Python Cache & Testing
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+backend/.pytest_cache/
+
+# IDE / Editor config
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Frontend Node modules and builds
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+tsconfig.tsbuildinfo
+frontend/tsconfig.tsbuildinfo
+
+# Java temp files
+*.class
+dfdf.java

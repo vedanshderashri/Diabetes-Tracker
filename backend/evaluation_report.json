@@ -1,0 +1,182 @@
+[
+  {
+    "query": "Explain the interaction between Metformin and Rifampicin.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.25,
+      "context_recall": 0.67,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 12.98
+    }
+  },
+  {
+    "query": "How do Omeprazole and Clopidogrel interact?",
+    "metrics": {
+      "faithfulness": 0.83,
+      "context_precision": 0.25,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 16.92
+    }
+  },
+  {
+    "query": "Describe the transporter and metabolic interaction between Simvastatin and Gemfibrozil.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.25,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 19.22
+    }
+  },
+  {
+    "query": "Discuss the mechanism of Dolutegravir-induced Metformin systemic elevation.",
+    "metrics": {
+      "faithfulness": 0.8,
+      "context_precision": 0.25,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 16.7
+    }
+  },
+  {
+    "query": "Explain the pharmacokinetics of the Digoxin and Verapamil interaction.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.25,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 15.53
+    }
+  },
+  {
+    "query": "What is the interaction mechanism of Loratadine and Ketoconazole?",
+    "metrics": {
+      "faithfulness": 0.83,
+      "context_precision": 0.25,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 18.68
+    }
+  },
+  {
+    "query": "Explain the pharmacodynamic interaction between Sildenafil and Nitroglycerin.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.5,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 23.43
+    }
+  },
+  {
+    "query": "Describe how Amiodarone increases Warfarin systemic exposure.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.25,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 16.63
+    }
+  },
+  {
+    "query": "Discuss the absorption and metabolic interaction between Tacrolimus and Erythromycin.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.5,
+      "context_recall": 0.75,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 19.88
+    }
+  },
+  {
+    "query": "How does Grapefruit juice alter Amlodipine pharmacokinetics?",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.5,
+      "context_recall": 0.75,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 17.86
+    }
+  },
+  {
+    "query": "Detail the absorption interaction between Fexofenadine and Orange juice.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.5,
+      "context_recall": 0.75,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 20.05
+    }
+  },
+  {
+    "query": "Explain the clearance interaction between Methotrexate and Penicillin G.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.5,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 20.15
+    }
+  },
+  {
+    "query": "Describe the cyclosporine-mediated pharmacokinetic changes of Rosuvastatin.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.5,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 20.0
+    }
+  },
+  {
+    "query": "Discuss the metabolic interaction between Carbamazepine and Erythromycin.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.25,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 18.31
+    }
+  },
+  {
+    "query": "Explain how Entacapone optimizes Levodopa pharmacokinetics.",
+    "metrics": {
+      "faithfulness": 1.0,
+      "context_precision": 0.67,
+      "context_recall": 1.0,
+      "citation_accuracy": 1.0
+    },
+    "performance": {
+      "latency_seconds": 24.07
+    }
+  }
+]
