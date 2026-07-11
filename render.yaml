@@ -24,6 +24,12 @@ services:
         value: /data/uploads
       - key: ML_MODELS_DIR
         value: ml_models
+      - key: GOOGLE_CSE_API_KEY
+        value: AIzaSyArSJjXPrgnIMcj7mh8DM0w--WdanKBZc8
+      - key: GOOGLE_CSE_ENGINE_ID
+        value: 11750d1437d224f5b
+      - key: WEB_SEARCH_ENABLED
+        value: "true"
       - key: OPENAI_API_BASE
         value: https://openrouter.ai/api/v1
       - key: OPENAI_CHAT_MODEL
