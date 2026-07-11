@@ -180,7 +180,7 @@ export default function ChatPage() {
   };
 
   const performSendMessage = async (content: string) => {
-    if ((!content.trim() && !attachedFile) || sending || !activeSession) return;
+    if ((!content.trim() && !attachedFile) || sending) return;
     if (extracting) {
       alert("Please wait until document text extraction finishes.");
       return;
@@ -198,6 +198,22 @@ export default function ChatPage() {
       fileInputRef.current.value = "";
     }
     setInput("");
+
+    // Auto-create chat session if none is active
+    let currentSessionId = activeSession;
+    if (!currentSessionId) {
+      try {
+        const title = fileToUpload ? `Document: ${fileToUpload.name}` : content.slice(0, 50);
+        const session = await api.createChatSession(title);
+        setSessions(prev => [session, ...prev]);
+        setActiveSession(session.id);
+        currentSessionId = session.id;
+      } catch (err: any) {
+        alert("Failed to start a new chat session: " + (err.message || "Unknown error"));
+        setSending(false);
+        return;
+      }
+    }
 
     // Format final message payload to send to LLM context
     if (fileToUpload) {
@@ -223,7 +239,7 @@ export default function ChatPage() {
     setMessages(prev => [...prev, tempUserMsg]);
 
     try {
-      const result = await api.sendMessage(activeSession, finalContent);
+      const result = await api.sendMessage(currentSessionId, finalContent);
       setMessages(prev => [
         ...prev.filter(m => m.id !== "temp-user"),
         result.user_message,
@@ -235,7 +251,7 @@ export default function ChatPage() {
         : content.slice(0, 50);
 
       setSessions(prev => prev.map(s =>
-        s.id === activeSession ? { ...s, title: sidebarTitle, message_count: (s.message_count || 0) + 2 } : s
+        s.id === currentSessionId ? { ...s, title: sidebarTitle, message_count: (s.message_count || 0) + 2 } : s
       ));
     } catch (err: any) {
       setMessages(prev => prev.filter(m => m.id !== "temp-user"));
