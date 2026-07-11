@@ -238,6 +238,8 @@ export default function ChatPage() {
     
     setMessages(prev => [...prev, tempUserMsg]);
 
+    if (!currentSessionId) return;
+
     try {
       const result = await api.sendMessage(currentSessionId, finalContent);
       setMessages(prev => [
