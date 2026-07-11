@@ -16,7 +16,8 @@ class ApiClient {
   private baseUrl: string;
 
   constructor(baseUrl: string) {
-    this.baseUrl = baseUrl;
+    // Remove trailing slash to prevent double slashes (//api/v1/...) in API requests
+    this.baseUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
   }
 
   private getToken(): string | null {
@@ -74,7 +75,9 @@ class ApiClient {
       config.body = isFormData ? (body as FormData) : JSON.stringify(body);
     }
 
-    const response = await fetch(`${this.baseUrl}${endpoint}`, config);
+    const fullUrl = `${this.baseUrl}${endpoint}`;
+    console.log(`[ApiClient] ${method} ${fullUrl}`);
+    const response = await fetch(fullUrl, config);
 
     if (response.status === 401) {
       // Try refresh token
@@ -82,7 +85,7 @@ class ApiClient {
       if (refreshed) {
         // Retry original request
         requestHeaders['Authorization'] = `Bearer ${this.getToken()}`;
-        const retryResponse = await fetch(`${this.baseUrl}${endpoint}`, {
+        const retryResponse = await fetch(fullUrl, {
           ...config,
           headers: requestHeaders,
         });
