@@ -237,8 +237,9 @@ export default function ChatPage() {
       setSessions(prev => prev.map(s =>
         s.id === activeSession ? { ...s, title: sidebarTitle, message_count: (s.message_count || 0) + 2 } : s
       ));
-    } catch {
+    } catch (err: any) {
       setMessages(prev => prev.filter(m => m.id !== "temp-user"));
+      alert(err.message || "Failed to send message. Please check your backend server logs.");
     }
 
     setSending(false);
