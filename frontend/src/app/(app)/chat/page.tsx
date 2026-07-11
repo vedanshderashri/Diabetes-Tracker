@@ -687,7 +687,7 @@ export default function ChatPage() {
                           color: "var(--text-secondary)"
                         }}>
                           <svg style={{ width: 14, height: 14, color: "var(--primary)" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 0l-5.656 5.656a4.002 4.002 0 11-5.656-5.656l8.485-8.485a6.002 6.002 0 128.485 8.485l-7.071 7.07a8.002 8.002 0 13-11.314-11.314l4.243-4.242" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 0l-5.656 5.656a4.002 4.002 0 11-5.656-5.656l8.485-8.485a6.002 6.002 0 118.485 8.485l-7.071 7.07a8.002 8.002 0 11-11.314-11.314l4.243-4.242" />
                           </svg>
                           <span>Attached: <strong>{parsed.fileName}</strong></span>
                         </div>
@@ -787,7 +787,7 @@ export default function ChatPage() {
                 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                     <svg style={{ width: 14, height: 14, color: "var(--primary)" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 0l-5.656 5.656a4.002 4.002 0 11-5.656-5.656l8.485-8.485a6.002 6.002 0 128.485 8.485l-7.071 7.07a8.002 8.002 0 13-11.314-11.314l4.243-4.242" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 0l-5.656 5.656a4.002 4.002 0 11-5.656-5.656l8.485-8.485a6.002 6.002 0 118.485 8.485l-7.071 7.07a8.002 8.002 0 11-11.314-11.314l4.243-4.242" />
                     </svg>
                     <span style={{ fontSize: "0.75rem", fontWeight: 600, color: "var(--text-secondary)" }}>
                       {attachedFile.name}
@@ -872,7 +872,7 @@ export default function ChatPage() {
                   }}
                 >
                   <svg style={{ width: 15, height: 15 }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 0l-5.656 5.656a4.002 4.002 0 11-5.656-5.656l8.485-8.485a6.002 6.002 0 128.485 8.485l-7.071 7.07a8.002 8.002 0 13-11.314-11.314l4.243-4.242" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 5.636l-3.536 3.536m0 0l-5.656 5.656a4.002 4.002 0 11-5.656-5.656l8.485-8.485a6.002 6.002 0 118.485 8.485l-7.071 7.07a8.002 8.002 0 11-11.314-11.314l4.243-4.242" />
                   </svg>
                 </button>
 
