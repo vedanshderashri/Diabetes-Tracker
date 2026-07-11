@@ -20,8 +20,14 @@ export default function LoginPage() {
       await api.login(email, password);
       router.push("/chat");
     } catch (err) {
-      if (err instanceof ApiError) {
+      if (err instanceof ApiError || (err instanceof Error && err.name === 'ApiError')) {
         setError(err.message);
+      } else if (err instanceof Error) {
+        if (err.message.includes("fetch") || err.message.includes("NetworkError")) {
+          setError("Cannot connect to the server. Please ensure the backend is running on port 8000.");
+        } else {
+          setError(err.message);
+        }
       } else {
         setError("An unexpected error occurred");
       }
